@@ -39,7 +39,7 @@ Breach Protocol adalah teknik dalam dunia komputer dan keamanan informasi yang d
 ```bash
   python3 src/BreachProtocolGUI.py
 ```
-![App Screenshot](https://drive.google.com/file/d/11V3zODmvWKAGTNZ0mA15hfsBbR1zIVqd/view)
+![App Screenshot](src/GUI.png)
 
 <br/>
 
