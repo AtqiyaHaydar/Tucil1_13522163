@@ -27,13 +27,14 @@ def search_horizontal(token, i, j, matrix, matrix_width):
     for col in range(matrix_width):
         if matrix[i][col] == token:
             return True, (i, col)
+        
     return False, (i, j)
 
 def search_vertical(token, i, j, matrix, matrix_height):
     for row in range(matrix_height):
         if matrix[row][j] == token:
             return True, (row, j)
-            
+
     return False, (i, j)
 
 def search_sequence(init, i, j, sequence, matrix, matrix_height, matrix_width):
