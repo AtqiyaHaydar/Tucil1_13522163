@@ -1,0 +1,10 @@
+Reward maksimal: 30
+Isi buffer: 55 BD 1C BD 55
+Koordinat setiap token: 
+(0, 0) 55
+(5, 0) BD
+(5, 1) 1C
+(3, 1) BD
+(3, 0) 55
+Waktu eksekusi: 0.000 ms
+Buffer melebihi kapasitas!

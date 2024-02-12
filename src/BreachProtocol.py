@@ -343,7 +343,7 @@ def display_grid(matrix):
   for row in matrix:
     print(" ".join(row))
 
-def save_output_to_file(filename, max_reward, max_buffer, coordinates, matrix, execution_time):
+def save_output_to_file(filename, max_reward, max_buffer, coordinates, matrix, execution_time, over_capacity):
   written_coordinates = set()
 
   with open(filename, 'w') as file:
@@ -355,6 +355,8 @@ def save_output_to_file(filename, max_reward, max_buffer, coordinates, matrix, e
           file.write("{} {}\n".format(coordinate, matrix[coordinate[0]][coordinate[1]]))
           written_coordinates.add(coordinate)
     file.write("Waktu eksekusi: {:.3f} ms\n".format(execution_time))
+    if over_capacity:
+      file.write("Buffer melebihi kapasitas!\n")
 
 def main():
   print(Fore.BLUE +"\n<< ============ TUCIL 1 ============ >>")
@@ -372,6 +374,7 @@ def main():
     sorted_sequences = sorted(sequences_and_rewards.items(), key=lambda x: x[1], reverse=True)
   elif option == "2":
     buffer_size, matrix_width, matrix_height, matrix, sequences_and_rewards = randomize()
+    sorted_sequences = sorted(sequences_and_rewards.items(), key=lambda x: x[1], reverse=True)
 
   print(Fore.CYAN + "\n<< ============ HASIL INPUT ============ >>\n" + Style.RESET_ALL)
   print(Style.RESET_ALL + "Buffer Size:", buffer_size)
@@ -387,6 +390,7 @@ def main():
   max_buffer, coordinates, max_reward, execution_time = find_maximum_reward(buffer_size, matrix_width, matrix_height, matrix, sorted_sequences)
 
   print(Fore.GREEN + "\n<< ============ HASIL OUTPUT ============ >>\n" + Style.RESET_ALL)
+  over_capacity = False
   print("Reward maksimal: ", max_reward)
   print("Isi buffer: ", max_buffer)
   print("Koordinat setiap token: ")
@@ -395,6 +399,10 @@ def main():
       if coordinate not in printed_coordinates:
           print(coordinate, matrix[coordinate[0]][coordinate[1]])
           printed_coordinates.add(coordinate)
+  
+  if len(max_buffer.split()) > buffer_size:
+    print(Fore.RED + "\nBuffer melebihi kapasitas! (", len(max_buffer.split()), ">", buffer_size, ")" + Style.RESET_ALL)
+    over_capacity = True
 
   print(Fore.BLUE + "\nWaktu eksekusi:", "{:.3f}".format(execution_time), "ms\n" + Style.RESET_ALL)
 
@@ -403,7 +411,7 @@ def main():
   if save == "y":
     filename = input("\nMasukkan nama file (dalam txt): ")
     print(Fore.GREEN + "\nBerhasil menyimpan solusi pada file output.txt!\n" + Style.RESET_ALL)
-    save_output_to_file(filename, max_reward, max_buffer, coordinates, matrix, execution_time)
+    save_output_to_file(filename, max_reward, max_buffer, coordinates, matrix, execution_time, over_capacity)
   else:
     print(Fore.GREEN + "\nTerima kasih telah menggunakan program ini!\n" + Style.RESET_ALL)
   

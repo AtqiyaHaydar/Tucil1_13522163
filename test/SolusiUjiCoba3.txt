@@ -1,0 +1,8 @@
+Reward maksimal: 25
+Isi buffer: 1C 7A 55 BD
+Koordinat setiap token: 
+(0, 0) 1C
+(2, 0) 7A
+(2, 2) 55
+(1, 2) 1C
+Waktu eksekusi: 8.167 ms

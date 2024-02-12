@@ -30,4 +30,4 @@ def randomize():
 
     sequences_and_rewards = randomize_sequences_and_rewards(number_of_sequences)
 
-    return buffer_size, matrix_width, matrix_height, matrix, number_of_sequences, sequences_and_rewards
+    return buffer_size, matrix_width, matrix_height, matrix, sequences_and_rewards
