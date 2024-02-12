@@ -2,6 +2,7 @@
 
 Breach Protocol adalah teknik dalam dunia komputer dan keamanan informasi yang digunakan untuk mengakses atau menembus sistem atau jaringan yang dilindungi dengan memanfaatkan celah atau kerentanan dalam keamanan. Ini dapat dilakukan dengan berbagai cara, termasuk memanfaatkan kelemahan perangkat lunak, teknik phishing, atau serangan brute force. Tujuan utama dari breach protocol adalah untuk mendapatkan akses tidak sah ke data sensitif atau sistem yang dilindungi untuk tujuan yang tidak sah, seperti pencurian informasi atau merusak sistem.
 
+##
 
 ## Dependencies
 Program Utama & User Interface
@@ -20,6 +21,8 @@ Atau install semuanya dalam satu command
   pip install requirements
 ```
 
+##
+
 ## Cara Menjalankan Program
 ```bash
   git clone https://github.com/AtqiyaHaydar/Tucil1_13522163.git
@@ -36,6 +39,8 @@ Atau install semuanya dalam satu command
 ```bash
   python3 src/BreachProtocolGUI.py
 ```
+
+##
 
 ## Identitas Pembuat Program
 
