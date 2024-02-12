@@ -31,8 +31,6 @@ Breach Protocol adalah teknik dalam dunia komputer dan keamanan informasi yang d
   cd (path menuju hasil clone)
 ```
 
-<br/>
-
 #### Untuk Menjalankan Program Menggunakan CLI
 ```bash
   python3 src/BreachProtocol.py
@@ -41,6 +39,7 @@ Breach Protocol adalah teknik dalam dunia komputer dan keamanan informasi yang d
 ```bash
   python3 src/BreachProtocolGUI.py
 ```
+![App Screenshot](https://drive.google.com/file/d/11V3zODmvWKAGTNZ0mA15hfsBbR1zIVqd/view)
 
 <br/>
 
