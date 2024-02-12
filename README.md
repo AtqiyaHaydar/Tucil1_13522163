@@ -2,6 +2,8 @@
 
 Breach Protocol adalah teknik dalam dunia komputer dan keamanan informasi yang digunakan untuk mengakses atau menembus sistem atau jaringan yang dilindungi dengan memanfaatkan celah atau kerentanan dalam keamanan. Ini dapat dilakukan dengan berbagai cara, termasuk memanfaatkan kelemahan perangkat lunak, teknik phishing, atau serangan brute force. Tujuan utama dari breach protocol adalah untuk mendapatkan akses tidak sah ke data sensitif atau sistem yang dilindungi untuk tujuan yang tidak sah, seperti pencurian informasi atau merusak sistem.
 
+Program dibuat untuk menemukan solusi maksimal dari permainan Breach Protocol menggunakan Algoritma Brute Force dengan manyamakan buffer yang didapat dengan sequence yang ada sehingga mendapatkan reward yang maksimal
+
 <br/>
 
 ## Dependencies
